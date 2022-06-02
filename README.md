@@ -1,13 +1,14 @@
 # Wanna-be-game ver. build
 Sebuah program permainan sederhana berburu monster
 
-## Changelogs (v0.1)
+## Changelogs (v0.2)
 * Add event
 * Add fitur detect arrowkey
 * Fix Gerak
+* Fix Event
 
 ## Bugs
-* Event muncul
+* Event muncul (fix)
 
 ## Source Code
 
@@ -69,7 +70,7 @@ int main() {
 		cout << "Panah yang kamu masukkan : " << panah << endl;
 
 	// atas	
-	if(panah == 72 && (map[y-1][x] == 1 || map[y-1][x] == 6) && y >= 0) {
+	if(panah == 72 && (map[y-1][x] == 1 || map[y-1][x] == 6 || map[y-1][x] == 2 || map[y-1][x] == 3 || map[y-1][x] == 5) && y >= 0) {
             if (map[y-1][x] == 2) {
 			y =y-1;
 			cout << "Selamat kamu mendapatkan summoning egg!\n";
@@ -85,8 +86,8 @@ int main() {
         }
 	
 	// bawah
-	if(panah == 80 && (map[y+1][x] == 1 || map[y+1][x] == 6) && y < tinggi) {
-        if (map[y][x-1] == 2) {
+	if(panah == 80 && (map[y+1][x] == 1 || map[y+1][x] == 6 || map[y+1][x] == 2 || map[y+1][x] == 3 || map[y+1][x] == 5) && y < tinggi) {
+        if (map[y+1][x] == 2) {
 			y =y+1;
 			cout << "Selamat kamu mendapatkan summoning egg!\n";
 		} else if ( map[y+1][x] == 3) {
@@ -101,7 +102,7 @@ int main() {
     }
 	
 	// kiri
-	if(panah == 75 && (map[y][x-1] == 1 || map[y][x-1] == 6) && x >= 0) {
+	if(panah == 75 && (map[y][x-1] == 1 || map[y][x-1] == 6 || map[y][x-1] == 2 || map[y][x-1] == 3 || map[y][x-1] == 5) && x >= 0) {
 		if (map[y][x-1] == 2) {
 			x =x-1;
 			cout << "Selamat kamu mendapatkan summoning egg!\n";
@@ -117,7 +118,7 @@ int main() {
     }
 	
 	// kanan
-	if(panah == 77 && (map[y][x+1] == 1 || map[y][x+1] == 6) && x < lebar) {
+	if(panah == 77 && (map[y][x+1] == 1 || map[y][x+1] == 6 || map[y][x+1] == 2 || map[y][x+1] == 3 || map[y][x+1] == 5) && x < lebar) {
         if (map[y][x+1] == 2) {
 			x =x+1;
 			cout << "Selamat kamu mendapatkan summoning egg!\n";
@@ -132,8 +133,6 @@ int main() {
 		} 
     }
         
-	// event
-	
 	
 	// peta
 	for(int i=0; i<tinggi; i++) {
