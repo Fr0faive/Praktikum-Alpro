@@ -63,23 +63,27 @@ int main() {
 		cout << "\nArah kemana?";
 		panah = getch();
 		cout << "Panah yang kamu masukkan : " << panah << endl;
-		
+	// atas	
 	if (panah == 72 && (map[tinggi-1][lebar] == 1 || map[tinggi-1][lebar] == 6) && y >= 0) {
 		y =-1;
 	}
 	
+	// bawah
 	if (panah == 80 && (map[tinggi+1][lebar] == 1 || map[tinggi+1][lebar] == 6) && y < tinggi) {
 		y = y + 1;
 	}
 	
+	// kanan
 	if (panah == 75 && (map[tinggi][lebar-1] == 1 || map[tinggi][lebar-1] == 6) && x >= 0) {
 		x =-1;
 	}
 	
+	// kiri
 	if (panah == 77 && (map[tinggi][lebar+1] == 1 || map[tinggi][lebar+1] == 6) && x < lebar) {
 		x =+1;
 	}
 	
+	// event
 	if (map[tinggi][lebar+1] == 2) {
 			cout << "Selamat kamu mendapatkan summoning egg!\n";
 		} else if ( map[tinggi][lebar+1] == 3) {
@@ -87,6 +91,8 @@ int main() {
 		} else if (map[tinggi][lebar+1] == 5) {
 			cout << "Selamat kamu mendapatkan harta karun!\n";
 	}
+	
+	// peta
 	for (int i=0; i < lebar; i++) {
 		for (int j=0; j<tinggi; j++) {
 			if (x == j && y == i) {
