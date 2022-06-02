@@ -1,7 +1,9 @@
-# Wanna-be-game
+# Wanna-be-game ver. build
 Sebuah program permainan sederhana berburu monster
 
 ## Changelogs
+* Bug Gerak
+* Add fitur detect arrowkey
 
 ## Source Code
 
