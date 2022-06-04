@@ -67,8 +67,7 @@ int main() {
 
 		cout << "\nArah kemana?";
 		panah = getch();
-		cout << "Panah yang kamu masukkan : " << panah << endl;
-
+	system("cls");
 	// atas	
 	if(panah == 72 && (map[y-1][x] == 1 || map[y-1][x] == 6 || map[y-1][x] == 2 || map[y-1][x] == 3 || map[y-1][x] == 5) && y >= 0) {
             if (map[y-1][x] == 2) {
@@ -133,7 +132,7 @@ int main() {
 		} 
     }
         
-	
+	cout << "Posisi kamu di " << x << "," << y << endl << endl;
 	// peta
 	for(int i=0; i<tinggi; i++) {
             for(int j=0; j<lebar; j++) {
