@@ -6,9 +6,14 @@ Sebuah program permainan sederhana berburu monster
 * Add fitur detect arrowkey
 * Fix Gerak
 * Fix Event
+* Penambahan penjelasan game
 
 ## Bugs
 * Event muncul (fix)
+
+## Next Coming Update
+* Penambahan monsters
+* Battle with monsters
 
 ## Source Code
 
@@ -25,7 +30,11 @@ using namespace std;
 int main() {
 	
 	int tinggi= 30, lebar=30, x=2, y=19; 
-	
+	cout << "Cara bermain : " << endl
+		 << "Tombol panah Atas/Bawah/Kanan/Kiri" << endl
+		 << "9 = dinding, 8 = bangunan, 6 = rumput, 7=barrier,\n5 = harta karun, 3 = item loot, 2 = summoning egg, 1= jalan" << endl
+		 << "=================================================" << endl
+		 << "Jelajahi map dan temukan sesuatu!" << endl;
 	cout << "Posisi kamu ada di " << x << " dan " << y << endl;
 	// 9 = dinding, 8 = bangunan, 6 = rumput, 7=barrier, 5 = harta karun, 3 = item loot, 2 = summoning egg, 1= jalan
 	int map[tinggi][lebar] = {
@@ -67,7 +76,8 @@ int main() {
 
 		cout << "\nArah kemana?";
 		panah = getch();
-	system("cls");
+		
+		system("cls");
 	// atas	
 	if(panah == 72 && (map[y-1][x] == 1 || map[y-1][x] == 6 || map[y-1][x] == 2 || map[y-1][x] == 3 || map[y-1][x] == 5) && y >= 0) {
             if (map[y-1][x] == 2) {
@@ -131,8 +141,7 @@ int main() {
 			x =x+1;
 		} 
     }
-        
-	cout << "Posisi kamu di " << x << "," << y << endl << endl;
+	cout << "Posisi kamu di " << x << "," << y << endl;
 	// peta
 	for(int i=0; i<tinggi; i++) {
             for(int j=0; j<lebar; j++) {
