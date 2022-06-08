@@ -17,11 +17,11 @@ Penggunaan Matriks dan Struct
 * Change Sign Player from 0 to H
 
 ## Bugs
-* Event muncul (fix)
+* ~Event muncul~ (fix)
 
 ## Next Coming Update
-* Penambahan monsters
-* ~Battle with monsters~
+* Penambahan ~monsters~ Musuh
+* Battle with ~monsters~
 
 ## Source Code
 
