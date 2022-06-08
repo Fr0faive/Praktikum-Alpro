@@ -1,5 +1,7 @@
 # Wanna-be-game ver. build
-Sebuah program permainan sederhana berburu monster
+Sebuah program permainan sederhana berpetualang.
+Repo ini ditujukan untuk memenuhi tugas Praktikum Algoritma dan Pemrograman
+Penggunaan Matriks dan Struct
 
 ## Changelogs
 ### v0.2
@@ -19,7 +21,7 @@ Sebuah program permainan sederhana berburu monster
 
 ## Next Coming Update
 * Penambahan monsters
-* Battle with monsters
+* ~Battle with monsters~
 
 ## Source Code
 
