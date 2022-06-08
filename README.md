@@ -20,8 +20,8 @@ Penggunaan Matriks dan Struct
 * ~Event muncul~ (fix)
 
 ## Next Coming Update
-* Penambahan ~monsters~ Musuh
-* Battle with ~monsters~
+* Penambahan musuh baru(?)
+* Penambahan Item (?)
 
 ## Source Code
 
