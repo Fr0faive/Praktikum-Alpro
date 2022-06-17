@@ -9,8 +9,8 @@ using namespace std;
 
 struct item {
 	string nama;
-	int harga;
-	int benefit;
+	int benefit_hp;
+	int benefit_dmg;
 };
 
 struct hero {
@@ -31,7 +31,32 @@ struct hero {
 	}
 };
 
+void panduan(int x, int y){
+
+	cout << "Cara bermain : " << endl
+		 << "Tombol panah Atas/Bawah/Kanan/Kiri" << endl
+		 << "9 = dinding, 8 = bangunan, 6 = rumput, 7=barrier,\n5 = harta karun, 3 = item loot, 2 = summoning egg, 1= jalan" << endl
+		 << "=================================================" << endl
+		 << "Jelajahi map dan temukan sesuatu!" << endl;
+	cout << "Posisi kamu ada di " << x << " dan " << y << endl;
+	// 9 = dinding, 8 = bangunan, 6 = rumput, 7=barrier, 5 = harta karun, 4 = Guinever, 3 = item loot, 2 = summoning egg, 1= jalan
+}
+
 int main() {
+	item itemLoot[] {
+		{
+			"AxeLust",
+			20,
+			400,
+		},
+		{
+			"Armorthena",
+			200,
+			500,
+		},
+		
+	}
+	
 	hero myHero1;
 	myHero1.nama = "Alucard";
 	myHero1.role = "Fighter";
@@ -49,13 +74,7 @@ int main() {
 	myHero2.att_speed = 1.14;
 	
 	int tinggi= 30, lebar=30, x=2, y=19, att; 
-	cout << "Cara bermain : " << endl
-		 << "Tombol panah Atas/Bawah/Kanan/Kiri" << endl
-		 << "9 = dinding, 8 = bangunan, 6 = rumput, 7=barrier,\n5 = harta karun, 3 = item loot, 2 = summoning egg, 1= jalan" << endl
-		 << "=================================================" << endl
-		 << "Jelajahi map dan temukan sesuatu!" << endl;
-	cout << "Posisi kamu ada di " << x << " dan " << y << endl;
-	// 9 = dinding, 8 = bangunan, 6 = rumput, 7=barrier, 5 = harta karun, 4 = Guinever, 3 = item loot, 2 = summoning egg, 1= jalan
+	panduan(x,y);
 	int map[tinggi][lebar] = {
 		{9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9},
 		{9,6,6,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9},
@@ -92,7 +111,6 @@ int main() {
 	int panah = 0;
 
 	while (1) {
-
 		cout << "\nArah kemana?";
 		panah = getch();
 		
@@ -114,7 +132,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -142,7 +160,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -173,7 +191,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -204,7 +222,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -220,7 +238,7 @@ int main() {
 			x =x+1;
 		} 
     }
-	cout << "Posisi kamu di " << x << "," << y << endl;
+    panduan(x,y);
 	// peta
 	for(int i=0; i<tinggi; i++) {
             for(int j=0; j<lebar; j++) {
