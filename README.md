@@ -15,6 +15,7 @@ Penggunaan Matriks dan Struct
 * Add Hero
 * Add Musuh
 * Change Sign Player from 0 to H
+* Reduce Code
 
 ## Bugs
 * ~Event muncul~ (fix)
@@ -286,7 +287,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -314,7 +315,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -345,7 +346,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
@@ -376,7 +377,7 @@ int main() {
 				cin >> att;
 				if (att == 1) {
 					myHero1.attack(&myHero2);
-					if (myHero2.hp == 0 || myHero2.hp<0) {
+					if (myHero2.hp <= 0) {
 						cout << "Musuh sudah kalah!\n";
 						break;
 					}
