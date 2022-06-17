@@ -23,6 +23,8 @@ Penggunaan Matriks dan Struct
 ## Next Coming Update
 * Penambahan musuh baru(?)
 * Penambahan Item (?)
+* Healing Spot
+* Item
 
 ## Source Code
 
