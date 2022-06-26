@@ -1,4 +1,4 @@
-# Wanna be Game
+# Wanna be Game ver. New
 Game sederhana yang mengambil konsep RPG.
 Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 
