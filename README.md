@@ -1,4 +1,4 @@
-# Wanna-be-game ver. build
+# Wanna-be-game ver. build (OLD, Check folder Wanna-be-Game)
 Sebuah program permainan sederhana berpetualang.
 Repo ini ditujukan untuk memenuhi tugas Praktikum Algoritma dan Pemrograman
 Penggunaan Matriks dan Struct
