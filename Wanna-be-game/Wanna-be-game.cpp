@@ -43,20 +43,26 @@ struct oblig {
 
 
 int main() {
-    int tombol,attack, kali=7;
+    int tombol,attack, kali=13;
     int posisix = kali-3;
     int posisiy = kali-2;
 
      //Isi Peta
     //1 = Jalan, 2 = rumput, 3 = ItemLoot, 4 = HealingSpot
     int peta[kali][kali] = {
-        {8,8,8,8,8,8,8},
-        {8,4,1,1,7,2,8},
-        {8,1,3,7,2,5,8},
-        {8,1,7,1,1,2,8},
-        {8,1,3,1,1,1,8},
-        {8,1,1,1,1,1,8},
-        {8,8,8,8,1,1,8},
+        {8,8,8,8,8,8,8,8,8,8,8,8,8},
+        {8,4,1,1,7,2,8,1,5,1,1,4,8},
+        {8,1,3,7,2,5,1,1,1,1,1,1,8},
+        {8,1,7,7,1,2,1,1,1,1,1,1,8},
+        {8,1,2,7,1,1,1,2,2,2,1,1,8},
+        {8,1,1,1,1,1,8,2,2,1,1,1,8},
+        {7,7,7,7,1,1,8,1,1,1,1,1,8},
+        {7,7,1,1,1,1,8,1,1,1,1,5,8},
+        {7,1,1,1,1,1,8,1,1,1,1,1,8},
+        {8,1,1,1,1,1,8,3,1,1,1,1,8},
+        {8,1,1,1,1,1,8,1,1,1,1,1,8},
+        {8,1,1,1,1,1,8,1,1,1,1,1,8},
+        {8,1,1,1,1,1,8,1,1,1,1,1,8},
     };
 
 
@@ -72,7 +78,7 @@ int main() {
          << "===        di      ===" << endl
          << "===  Wanna be Game ===" << endl << endl;
 
-    cout << "Masukkan nama anda : "; cin >> pemain.nickName;
+    cout << "Masukkan nickname : "; cin >> pemain.nickName;
 
 
     while (true) {
@@ -95,7 +101,7 @@ int main() {
                 } else if (peta[y][x]==5) {
                     cout << dye::red_on_white(peta[y][x]) << " ";
                 } else if (peta[y][x]==7) {
-                    cout << dye::aqua(peta[y][x]) << " ";
+                    cout << dye::aqua_on_aqua(peta[y][x]) << " ";
                 } else if (peta[y][x]==8) {
                     cout << dye::green_on_light_green(peta[y][x]) << " ";
                 } else {
@@ -109,7 +115,10 @@ int main() {
     cout << dye::blue("\nU") << " : Kamu" << endl
          << dye::bright_white_on_black("1") << " : Jalan"<<endl
          << dye::green("2") << " : Rumput" << endl
-         << dye::aqua("7") << " : Sungai" << endl
+         << dye::yellow_on_white("3") << " : ???"<< endl
+         << dye::green_on_green("4")<< " : ???" << endl
+         << dye::red_on_white("5") << ": ???" << endl
+         << dye::aqua_on_aqua("7") << " : Sungai" << endl
          << dye::green_on_grey("8") << " : Pohon" << endl;
      // Petunjuk
      cout << "\n\nNote : \n1. Gunakan arrow key untuk menggerakkan player\n2. Tekan tombol End untuk Detail Karakter\n";
@@ -173,6 +182,7 @@ int main() {
                 pemain.attack(&curio.hp);
                 if (curio.hp <= 0) {
                     cout << "Kamu sudah mengalahkan " << dye::red(curio.nama) << "!"<<endl;
+                    getch();
                     break;
                 }
                 if (attMnstr == 1) {
