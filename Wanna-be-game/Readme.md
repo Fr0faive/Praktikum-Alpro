@@ -1,9 +1,10 @@
 # Wanna be Game
-Game sederhana yang mengambil konsep RPG
+Game sederhana yang mengambil konsep RPG.
+Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 
 ## ChangeLogs
 
-* Initial Build (Upgrade dari Versi sebelumnya)
+* Initial Build (Upgrade from Previous Version)
 
 ## Fitur
 * Battle with Oblig
