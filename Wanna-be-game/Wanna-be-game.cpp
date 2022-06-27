@@ -8,6 +8,7 @@ using namespace std;
 #define tombolKiri 75
 #define tombolKanan 77
 #define tombolEnd 79
+#define tombolDelete 83
 
 struct user {
     string nickName;
@@ -43,7 +44,7 @@ struct oblig {
 
 
 int main() {
-    int tombol,attack, kali=13;
+    int tombol,attack, kali=13, pil;
     int posisix = kali-3;
     int posisiy = kali-2;
 
@@ -51,18 +52,18 @@ int main() {
     //1 = Jalan, 2 = rumput, 3 = ItemLoot, 4 = HealingSpot
     int peta[kali][kali] = {
         {8,8,8,8,8,8,8,8,8,8,8,8,8},
-        {8,4,1,1,7,2,8,1,5,1,1,4,8},
-        {8,1,3,7,2,5,1,1,1,1,1,1,8},
-        {8,1,7,7,1,2,1,1,1,1,1,1,8},
+        {8,4,1,1,7,2,8,1,5,8,1,4,8},
+        {8,1,3,7,2,5,1,1,8,1,1,1,8},
+        {8,1,7,7,1,2,1,1,1,1,8,1,8},
         {8,1,2,7,1,1,1,2,2,2,1,1,8},
         {8,1,1,1,1,1,8,2,2,1,1,1,8},
         {7,7,7,7,1,1,8,1,1,1,1,1,8},
-        {7,7,1,1,1,1,8,1,1,1,1,5,8},
-        {7,1,1,1,1,1,8,1,1,1,1,1,8},
-        {8,1,1,1,1,1,8,3,1,1,1,1,8},
-        {8,1,1,1,1,1,8,1,1,1,1,1,8},
-        {8,1,1,1,1,1,8,1,1,1,1,1,8},
-        {8,1,1,1,1,1,8,1,1,1,1,1,8},
+        {7,7,1,1,1,1,8,1,1,8,1,5,8},
+        {7,1,1,1,1,1,8,1,1,1,1,8,8},
+        {8,1,8,1,8,1,8,3,1,8,1,1,8},
+        {8,1,8,1,1,1,8,1,1,1,1,1,8},
+        {8,1,1,1,8,1,8,8,1,1,1,1,8},
+        {8,8,8,8,1,1,8,8,1,1,1,1,8},
     };
 
 
@@ -74,15 +75,22 @@ int main() {
     pemain.type = "Swordman";
     pemain.dmg = 254;
 
-    cout << "=== Selamat Datang ===" << endl
-         << "===        di      ===" << endl
-         << "===  Wanna be Game ===" << endl << endl;
+    menu :
+    system("cls");
+    cout << hue::blue << "======================" << endl
+         << "=== Selamat Datang ===" << endl
+         << "=====      di    =====" << endl
+         << "===  Wanna be Game ===" << endl
+         << "======================" << hue::reset << endl << endl;
 
-    cout << "Masukkan nickname : "; cin >> pemain.nickName;
-
-
+    cout << hue::bright_white << "1. Start Game\n2. Keluar\nPilihan : " << hue::reset;
+    cin >> pil;
+    switch (pil) {
+    case 1 :
+        system("cls");
+        cout << hue::green << "===   SELAMAT BERMAIN, PLAYER!   ===\n"<<hue::reset;
+        cout << "Masukkan nickname : "; cin >> pemain.nickName;
     while (true) {
-
     //Render Map
     system("cls");
     for (int y=0; y<kali;y++) {
@@ -115,13 +123,10 @@ int main() {
     cout << dye::blue("\nU") << " : Kamu" << endl
          << dye::bright_white_on_black("1") << " : Jalan"<<endl
          << dye::green("2") << " : Rumput" << endl
-         << dye::yellow_on_white("3") << " : ???"<< endl
-         << dye::green_on_green("4")<< " : ???" << endl
-         << dye::red_on_white("5") << ": ???" << endl
          << dye::aqua_on_aqua("7") << " : Sungai" << endl
          << dye::green_on_grey("8") << " : Pohon" << endl;
      // Petunjuk
-     cout << "\n\nNote : \n1. Gunakan arrow key untuk menggerakkan player\n2. Tekan tombol End untuk Detail Karakter\n";
+     cout << "\n\nNote : \n1. Gunakan arrow key untuk menggerakkan player\n2. Tekan tombol End untuk Detail Karakter\n3. Tekan Delete untuk kembali kemu\n";
      cout << "Masukkan : ";
      tombol = getch();
 
@@ -151,6 +156,7 @@ int main() {
             posisix = posisix + 1;
         }
     } else if (tombol == tombolEnd) {
+        system("cls");
         cout << dye::aqua("\n=== Detail Karakter ===\n")
          << dye::green("Nickname     : ")<< pemain.nickName << endl
          << "Nama Pejuang : " << pemain.nama << endl
@@ -158,6 +164,11 @@ int main() {
          << "HP           : " << pemain.hp << endl
          << "Damage       : " << pemain.dmg << endl;
          getch();
+    } else if (tombol == tombolDelete) {
+        system("cls");
+        cout << dye::yellow("Sedang kembali ke menu") <<endl;
+        getch();
+        goto menu;
     }
 
     //Bertemu musuh
@@ -199,21 +210,41 @@ int main() {
     }
 
     //Item Spot & Healing spot
-    if (peta[posisiy][posisix] == 3 && pemain.dmg <= 496) {
-        pemain.dmg = pemain.dmg + 37;
-        cout << "Damage kamu bertambah menjadi " << pemain.dmg << endl;
-        getch();
-        system("cls");
+    if (peta[posisiy][posisix] == 3) {
+        if (pemain.dmg <= 496) {
+            pemain.dmg = pemain.dmg + 37;
+            system("cls");
+            cout << "Damage kamu bertambah menjadi " << pemain.dmg << endl;
+            getch();
+        } else {
+            system("cls");
+            cout << "Damage kamu sudah maksimal!\n";
+            getch();
+        }
     } else if (peta[posisiy][posisix] == 4 && pemain.hp <= 11250) {
+        if (pemain.hp<=11250) {
             for (int h=0;h<3;h++) {
                 pemain.hp += 79;
             }
-        cout << "Darah kamu menjadi : " << pemain.hp << endl;
-    } else {
-        cout << "Damage/Darah kamu sudah maksimal!\n";
+            system("cls");
+            cout << "Darah kamu menjadi : " << pemain.hp << endl;
+            getch();
+        } else {
+            system("cls");
+            cout << "Darah kamu sudah maksimal!\n";
+            getch();
+        }
     }
 
-    //
+
+    }
+    break;
+    case 2 :
+        getch();
+    break;
+    default :
+        cout << "Tidak ada pilihan itu!\n";
+    break;
     }
     return 0;
    }
