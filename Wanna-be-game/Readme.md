@@ -12,6 +12,7 @@ Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 * Add More Oblig
 * Add More Healing Spot
 * Add More Obstacle
+* Add Menu
 
 ## Fitur
 * Battle with Oblig
