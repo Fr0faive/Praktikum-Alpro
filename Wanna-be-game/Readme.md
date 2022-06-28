@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/105912788/175854385-8577ad0f-57d7-4826
 
 ## ChangeLogs
 ### 0.1
-* Initial Build (Upgrade from Previous Version)
+* Initial Build (Better than Previous Version)
 
 ### 0.2
 * Resize Map
