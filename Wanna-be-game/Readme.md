@@ -23,14 +23,12 @@ Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 * Increase Damage Item
 
 ## Bugs
-* ~Increase Damage Spot can stack infinite~
+* Increase Damage Spot can stack infinite (?)
 * Battle with Oblig Twice
+* Player Can Exit The Map
 
 ## Demo Video
 https://user-images.githubusercontent.com/105912788/175854385-8577ad0f-57d7-4826-94b4-d08f32f4f8ad.mp4
-
-
-
 
 ## Credits
 * [Color Console](https://github.com/imfl/color-console)
