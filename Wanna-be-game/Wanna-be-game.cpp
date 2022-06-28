@@ -22,7 +22,6 @@ struct user {
         cout << "Kamu menyerangnya, sisa darah Oblig " << *objHp << endl;
     }
 
-
 };
 
 struct oblig {
@@ -38,17 +37,12 @@ struct oblig {
 
 };
 
-
-// Isi Peta
-
-
-
 int main() {
     int tombol,attack, kali=13, pil;
-    int posisix = kali-3;
-    int posisiy = kali-2;
+    int posisix = 10;
+    int posisiy = 11;
 
-     //Isi Peta
+    //Isi Peta
     //1 = Jalan, 2 = rumput, 3 = ItemLoot, 4 = HealingSpot
     int peta[kali][kali] = {
         {8,8,8,8,8,8,8,8,8,8,8,8,8},
@@ -125,13 +119,16 @@ int main() {
          << dye::green("2") << " : Rumput" << endl
          << dye::aqua_on_aqua("7") << " : Sungai" << endl
          << dye::green_on_grey("8") << " : Pohon" << endl;
+
+    // Posisi
+    cout << "Posisi Kamu (U) : " << posisix << " " << posisiy << endl;
      // Petunjuk
      cout << "\n\nNote : \n1. Gunakan arrow key untuk menggerakkan player\n2. Tekan tombol End untuk Detail Karakter\n3. Tekan Delete untuk kembali kemu\n";
      cout << "Masukkan : ";
      tombol = getch();
 
     // Gerakan
-    if (tombol == tombolAtas && posisiy > 0) {
+    if (tombol == tombolAtas && posisiy >= 0) {
         if (peta[posisiy-1][posisix] == 8 || peta[posisiy-1][posisix] == 7) {
             cout << "Tidak bisa lewat!\n";
         } else {
@@ -143,7 +140,7 @@ int main() {
         } else {
             posisiy = posisiy + 1;
         }
-    } else if (tombol == tombolKiri && posisix >0) {
+    } else if (tombol == tombolKiri && posisix >= 0) {
         if (peta[posisiy][posisix-1] == 8 || peta[posisiy][posisix-1] == 7) {
             cout << "Tidak bisa lewat!\n";
         } else {
