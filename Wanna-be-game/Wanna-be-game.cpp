@@ -212,7 +212,7 @@ int main() {
     //Item Spot & Healing spot
     if (peta[posisiy][posisix] == 3) {
         if (pemain.dmg <= 496) {
-            pemain.dmg = pemain.dmg + 37;
+            pemain.dmg = pemain.dmg + (rand()%43);
             system("cls");
             cout << "Damage kamu bertambah menjadi " << pemain.dmg << endl;
             getch();
@@ -224,7 +224,7 @@ int main() {
     } else if (peta[posisiy][posisix] == 4 && pemain.hp <= 11250) {
         if (pemain.hp<=11250) {
             for (int h=0;h<3;h++) {
-                pemain.hp += 79;
+                pemain.hp += (rand()%79);
             }
             system("cls");
             cout << "Darah kamu menjadi : " << pemain.hp << endl;
