@@ -16,6 +16,8 @@ Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 
 ### 0.3
 * Random Healing & Damage
+* Add Position of U
+* Reduce Code
 
 ## Fitur
 * Battle with Oblig
