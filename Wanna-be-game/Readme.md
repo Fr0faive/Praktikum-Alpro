@@ -8,6 +8,11 @@ Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 A simple game that takes the RPG concept.
 This game is to fulfill the Algorithm and Programming Practicum Exam
 
+## Demo Video
+Demo Video taken from version 0.2
+
+https://user-images.githubusercontent.com/105912788/175854385-8577ad0f-57d7-4826-94b4-d08f32f4f8ad.mp4
+
 ## ChangeLogs
 ### 0.1
 * Initial Build (Upgrade from Previous Version)
@@ -33,11 +38,6 @@ This game is to fulfill the Algorithm and Programming Practicum Exam
 * Increase Damage Spot can stack infinite (?)
 * Battle with Oblig Twice
 * Player Can Exit The Map
-
-## Demo Video
-Demo Video taken from version 0.2
-
-https://user-images.githubusercontent.com/105912788/175854385-8577ad0f-57d7-4826-94b4-d08f32f4f8ad.mp4
 
 ## Credits
 * [Color Console](https://github.com/imfl/color-console)
