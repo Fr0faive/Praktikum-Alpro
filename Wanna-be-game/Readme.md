@@ -1,9 +1,14 @@
 # Wanna be Game ver. New
+
+### ID
 Game sederhana yang mengambil konsep RPG.
 Game ini untuk memenuhi UAS Praktikum Algoritma dan Pemrograman
 
-## ChangeLogs
+### EN
+A simple game that takes the RPG concept.
+This game is to fulfill the Algorithm and Programming Practicum Exam
 
+## ChangeLogs
 ### 0.1
 * Initial Build (Upgrade from Previous Version)
 
