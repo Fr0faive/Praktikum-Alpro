@@ -28,7 +28,7 @@ https://user-images.githubusercontent.com/105912788/175854385-8577ad0f-57d7-4826
 
 ### 0.3
 * Random Healing & Damage
-* Add Position of U
+* Change Position of U
 * Reduce Code
 
 ## Fitur
