@@ -10,6 +10,7 @@ This game is to fulfill the Algorithm and Programming Practicum Exam
 
 ## Demo Video
 Demo Video taken from version 0.2
+
 [Demo di Youtube](https://youtu.be/MbeYRrtV2Yw)
 
 https://user-images.githubusercontent.com/105912788/175854385-8577ad0f-57d7-4826-94b4-d08f32f4f8ad.mp4
