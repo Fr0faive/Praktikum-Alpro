@@ -42,6 +42,9 @@ int main() {
     int posisix = 10;
     int posisiy = 11;
 
+    //Title Program
+    system("title Wanna be Game - New");
+
     //Isi Peta
     //1 = Jalan, 2 = rumput, 3 = ItemLoot, 4 = HealingSpot
     int peta[kali][kali] = {
